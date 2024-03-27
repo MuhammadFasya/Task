@@ -1,8 +1,8 @@
 #Items name, price, and stock
 items= {
     "Lipstick": {"price": 60000, "stock":5},
-    "Powder": {"price":50000, "stock": 10},
-    "Foundation": {"price":70000, "stock":6}
+    "Powder": {"price": 50000, "stock": 10},
+    "Foundation": {"price": 70000, "stock":6}
 }
 #Display avaible items
 def show_items():
@@ -23,7 +23,7 @@ def purchase_item(item_name, quantity):
             # Update stock and calculate total price
             item_details["stock"] -= quantity
             total_price = item_details["price"] * quantity
-            print(f"Successfully purchased {quantity} {item_name}(s) for a total of ${total_price}.")
+            print(f"Successfully purchased {quantity} {item_name}(s) for a total of Rp{total_price}.")
         else:
             print(f"Insufficient stock for {item_name}. Only {item_details['stock']} remaining.")
     else:
@@ -40,7 +40,7 @@ def show_summary():
     print("Summary:")
     print("-" * 30)
     print(f"Total Transactions: {total_transactions}")
-    print(f"Total Profit: ${total_profit}")
+    print(f"Total Profit: Rp{total_profit}")
 
 # Main program loop
 while True:
